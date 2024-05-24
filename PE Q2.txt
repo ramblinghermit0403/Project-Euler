@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int n;
+   cin>>n;
+   int a=1;
+   int b=2;
+   int fib=a+b;
+   int esum=2;
+   
+   while(fib<n)
+   {
+      a=b;
+      b=fib;
+      fib=fib+a;
+      
+      if(fib%2==0)
+      esum=esum+fib;
+      
+       
+   }
+   cout<<esum;
+   return 0;
+}
