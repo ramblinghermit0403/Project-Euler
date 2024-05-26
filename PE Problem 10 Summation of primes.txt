@@ -1,0 +1,39 @@
+Problem 10: Summation of primes
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below n.
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int isprime(int x)
+{
+    if(x==2)
+    return true;
+    
+    for(int i=2;i<x;i++)
+    {
+        if(x%i==0)
+        return false;
+    }
+return true;
+}
+
+
+int main()
+{
+    int n;
+    cin>>n;
+    int psum=0;
+    
+    for(int i=2;i<n;i++)
+    {
+        if(isprime(i))
+        psum=psum+i;
+    }
+    
+    cout<<psum;
+    return 0;
+}
